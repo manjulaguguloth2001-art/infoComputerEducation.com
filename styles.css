@@ -116,7 +116,7 @@ p { margin: 0 0 1em; color: var(--gray-700); }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(186, 244, 26, 0.85);
+  background: rgba(4, 79, 29, 0.85);
   backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--gray-100);
 }
@@ -173,17 +173,18 @@ p { margin: 0 0 1em; color: var(--gray-700); }
 
 /* ---------- Hero ---------- */
 .hero {
-  position: relative;
-  padding: clamp(3rem, 8vw, 6rem) 0 clamp(4rem, 10vw, 8rem);
-  background-image: url(https://plus.unsplash.com/premium_photo-1683887034491-f58b4c4fca72?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZGVudHN8ZW58MHx8MHx8fDA%3D);
+  background-image: url('https://plus.unsplash.com/premium_photo-1683887034491-f58b4c4fca72?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZGVudHN8ZW58MHx8MHx8fDA%3D');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+   position :relative;
+  padding: clamp(3rem, 8vw, 6rem) 0 clamp(6rem, 10vw, 8rem);
   /*background:
     radial-gradient(1200px 600px at 90% -10%, var(--yellow-soft), transparent 60%),
     radial-gradient(900px 500px at -10% 30%, #adda28, transparent 60%),
     #2bed8f;*/
-  overflow: hidden;
+    overflow: visible;
+  
 }
 .hero__grid {
   display: grid;
@@ -315,6 +316,7 @@ p { margin: 0 0 1em; color: var(--gray-700); }
 }
 
 /* ---------- Sections ---------- */
+
 .section { padding: clamp(4rem, 8vw, 7rem) 0; }
 .section--dark { background: var(--navy); color: #19e720; }
 .section--dark h2, .section--dark h3, .section--dark h4 { color: #fff; }
@@ -329,17 +331,76 @@ p { margin: 0 0 1em; color: var(--gray-700); }
   gap: 1.4rem;
 }
 .course {
-  background-image: url(https://img.magnific.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?semt=ais_hybrid&w=740&q=80);
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:cover;
+  course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* COURSE CARD */
+.course {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 360px;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  transition: 0.4s ease;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  }
+
+/* CONTENT */
+.course-content {
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  color: white;
+}
+
+/* HOVER EFFECT */
+.course:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* ICON */
+.course__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+  font-size: 28px;
+  color: white;
+}
+}
+
+ /*background-image: url(https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_1280.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
   /*background: #fff;
   border: 1px solid var(--gray-100);
   border-radius: var(--radius);
   padding: 1.6rem;
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s;
   display: flex;*/
-  flex-direction: column;
+ /* flex-direction: column;
 }
 .course:hover {
   transform: translateY(-6px);
@@ -361,6 +422,7 @@ p { margin: 0 0 1em; color: var(--gray-700); }
 .course__icon--purple { background: var(--purple); }
 .course__icon--teal   { background: var(--teal); }
 .course__icon--pink   { background: var(--pink); }
+
 
 .course h3 { margin-bottom: .4rem; }
 .course p { font-size: .95rem; margin-bottom: 1.2rem; }
@@ -388,7 +450,7 @@ p { margin: 0 0 1em; color: var(--gray-700); }
   padding-bottom: 2px;
   transition: border-color .2s, color .2s;
 }
-.course__cta:hover { border-color: var(--yellow); color: var(--navy-2); }
+.course__cta:hover { border-color: var(--yellow); color: var(--navy-2); }*/
 
 /* ---------- Pillars ---------- */
 .pillars {
@@ -578,7 +640,7 @@ p { margin: 0 0 1em; color: var(--gray-700); }
 .footer {
   /*background: var(--navy);
   color: rgba(235, 23, 136, 0.75);*/
-  background-image:url(https://thumbs.dreamstime.com/b/elevate-your-website-design-stunning-hd-background-images-collection-elegant-modern-professional-transform-your-378520615.jpg);
+  background-image:url(https://wallpapers.com/images/hd/professional-background-4b31fgiuezafrguu.jpg);
   background-repeat:no-repeat;
   background-position:center;
   background-size:cover;
@@ -589,7 +651,7 @@ p { margin: 0 0 1em; color: var(--gray-700); }
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 2rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(86, 221, 239, 0.895);
+  border-bottom: 1px solid rgba(194, 219, 28, 0.895);
 }
 .footer h5 {
   color: #30300c;
@@ -599,7 +661,7 @@ p { margin: 0 0 1em; color: var(--gray-700); }
   margin-bottom: 1rem;
 }
 .footer ul { display: flex; flex-direction: column; gap: .55rem; font-size: .92rem; }
-.footer ul li { color: rgba(174, 7, 240, 0.65); }
+.footer ul li { color: rgba(48, 15, 198, 0.795); }
 .footer__bottom {
   display: flex;
   justify-content: space-between;
